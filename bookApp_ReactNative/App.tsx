@@ -64,9 +64,11 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    // <SafeAreaView style={backgroundStyle}>
+    <>
       <Main />
-      {/* <StatusBar
+    </>
+    /* <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
@@ -93,8 +95,8 @@ function App(): JSX.Element {
           </Section>
           <LearnMoreLinks />
         </View>
-      </ScrollView> */}
-    </SafeAreaView>
+      </ScrollView> */
+    // </SafeAreaView>
   );
 }
 
