@@ -4,7 +4,7 @@ import SearchBook from '../src/components/SearchBook';
 
 const FindBook = () => {
   return (
-    <View style={{backgroundColor: 'pink'}}>
+    <View>
       <Text>Find your book Bitch</Text>
       <SearchBook />
     </View>

@@ -1,23 +1,20 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 import FindBook from '../src/FindBook.js';
 
 const Main = () => {
   return (
-    <View>
+    <View style={styles.mainComponent}>
       <View>
         <Text>Title</Text>
         <Text>by</Text>
-        <Image
-          style={{width: '50%', height: '50%', backgroundColor: 'orange'}}
-          source={{
-            uri: 'https://reactjs.org/logo-og.png',
-          }}
-        />
         <FindBook />
       </View>
     </View>
   );
 };
 
+const styles = StyleSheet.create({
+  mainComponent: {backgroundColor: '#C5C5C5'},
+});
 export default Main;
