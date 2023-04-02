@@ -26,7 +26,7 @@ const SearchBook = () => {
           style={styles.btnSearch}
           onPress={() => Alert.alert('Button with adjusted color pressed')}
           title="Learn More"
-          color="#841584"
+          color="#cdebf9"
           accessibilityLabel="Learn more about this purple button"
         />
       </View>
@@ -38,11 +38,14 @@ const SearchBook = () => {
 
 const styles = StyleSheet.create({
   input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
+    height: 35,
+    marginTop: 12,
+    marginBottom: 12,
+    backgroundColor: '#cdebf9',
+    color: 'white',
     padding: 10,
-    fontFamily: 'Arial, Helvetica, sans-serif',
+    borderTopLeftRadius: 40,
+    borderBottomLeftRadius: 40,
   },
   imgSze: {
     marginLeft: 'auto',
@@ -64,6 +67,9 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     marginLeft: '10%',
+  },
+  btnSearch: {
+    backgroundColor: '#C5C5C5',
   },
 });
 
