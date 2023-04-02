@@ -8,6 +8,7 @@ import {
   StyleSheet,
   Image,
 } from 'react-native';
+import Card from '../components/Card';
 
 const staticImage = require('../images/bookTiles.png');
 
@@ -32,6 +33,9 @@ const SearchBook = () => {
       </View>
       <Image style={styles.imgSze} source={staticImage} alt="" />
       <Text style={styles.txtSize}>Title by</Text>
+      <View style={styles.container}>
+        <Card />
+      </View>
     </View>
   );
 };
@@ -50,8 +54,8 @@ const styles = StyleSheet.create({
   imgSze: {
     marginLeft: 'auto',
     marginRight: 'auto',
-    width: '80%',
-    height: '50%',
+    width: '75%',
+    height: '25%',
   },
   row2: {
     textAlign: 'center',
