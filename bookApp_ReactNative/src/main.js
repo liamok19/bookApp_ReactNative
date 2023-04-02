@@ -6,8 +6,6 @@ const Main = () => {
   return (
     <View style={styles.mainComponent}>
       <View>
-        <Text>Title</Text>
-        <Text>by</Text>
         <FindBook />
       </View>
     </View>
@@ -15,6 +13,10 @@ const Main = () => {
 };
 
 const styles = StyleSheet.create({
-  mainComponent: {backgroundColor: '#C5C5C5'},
+  mainComponent: {
+    backgroundColor: '#C5C5C5',
+    width: '100%',
+    height: '100%',
+  },
 });
 export default Main;

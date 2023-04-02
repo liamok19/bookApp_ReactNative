@@ -1,19 +1,37 @@
 import React, {useState} from 'react';
-import {View, Text, TextInput, StyleSheet, Image} from 'react-native';
+import {
+  Alert,
+  Button,
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  Image,
+} from 'react-native';
+
 const staticImage = require('../images/bookTiles.png');
 
 const SearchBook = () => {
-  const [text, onChangeText] = useState('Useless Text');
+  const [text, onChangeText] = useState('');
   return (
-    <View style={styles.row2}>
-      <Text>Text Bitch once again</Text>
-      <TextInput
-        placeholder="Enter your desired book"
-        style={styles.input}
-        onChangeText={onChangeText}
-        value={text}
-      />
+    <View>
+      <View style={styles.searchStyle}>
+        <TextInput
+          placeholder="Enter your desired book"
+          style={styles.input}
+          onChangeText={onChangeText}
+          value={text}
+        />
+        <Button
+          style={styles.btnSearch}
+          onPress={() => Alert.alert('Button with adjusted color pressed')}
+          title="Learn More"
+          color="#841584"
+          accessibilityLabel="Learn more about this purple button"
+        />
+      </View>
       <Image style={styles.imgSze} source={staticImage} alt="" />
+      <Text style={styles.txtSize}>Title by</Text>
     </View>
   );
 };
@@ -24,16 +42,28 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 1,
     padding: 10,
+    fontFamily: 'Arial, Helvetica, sans-serif',
   },
   imgSze: {
     marginLeft: 'auto',
     marginRight: 'auto',
-    width: '50%',
+    width: '80%',
     height: '50%',
   },
   row2: {
-    // position: 'absolute',
-    top: '10px',
+    textAlign: 'center',
+    marginTop: 10,
+  },
+  txtSize: {
+    fontSize: 30,
+    fontFamily: 'Arial, Helvetica, sans-serif',
+  },
+  searchStyle: {
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
+    alignItems: 'center',
+    marginLeft: '10%',
   },
 });
 
