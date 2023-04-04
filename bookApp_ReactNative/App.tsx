@@ -24,7 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Main from '../bookApp_ReactNative/src/main';
+import Main from './src/Main';
 
 type SectionProps = PropsWithChildren<{
   title: string;

@@ -13,15 +13,22 @@ import Card from '../components/Card';
 const staticImage = require('../images/bookTiles.png');
 
 const SearchBook = () => {
-  const [text, onChangeText] = useState('');
+  // const [text, onChangeText] = useState('');
+  const [search, setSearch] = useState('');
+
+  const SearchBook = () => {
+    console.log('test');
+  };
+
   return (
     <View>
       <View style={styles.searchStyle}>
         <TextInput
           placeholder="Enter your desired book"
           style={styles.input}
-          onChangeText={onChangeText}
-          value={text}
+          onChangeText={e => setSearch(SearchBook)}
+          onKeyPress={searchBook}
+          value={search}
         />
         <Button
           style={styles.btnSearch}
@@ -34,6 +41,7 @@ const SearchBook = () => {
       <Image style={styles.imgSze} source={staticImage} alt="" />
       <Text style={styles.txtSize}>Title by</Text>
       <View style={styles.container}>
+        <Card />
         <Card />
       </View>
     </View>
@@ -54,12 +62,12 @@ const styles = StyleSheet.create({
   imgSze: {
     marginLeft: 'auto',
     marginRight: 'auto',
-    width: '75%',
-    height: '25%',
+    width: '90%',
+    height: '5%',
   },
   row2: {
     textAlign: 'center',
-    marginTop: 10,
+    // marginTop: 10,
   },
   txtSize: {
     fontSize: 30,
@@ -74,6 +82,13 @@ const styles = StyleSheet.create({
   },
   btnSearch: {
     backgroundColor: '#C5C5C5',
+  },
+  container: {
+    // position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    maxWidth: '90%',
+    paddingLeft: '10%',
   },
 });
 

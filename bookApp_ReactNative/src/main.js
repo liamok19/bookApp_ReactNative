@@ -1,6 +1,6 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
-import FindBook from '../src/FindBook.js';
+import FindBook from './FindBook.js';
 
 const Main = () => {
   return (
@@ -9,6 +9,7 @@ const Main = () => {
         <FindBook />
       </View>
     </View>
+    
   );
 };
 

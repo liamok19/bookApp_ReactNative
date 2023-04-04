@@ -10,7 +10,7 @@ const Card = () => {
         <Image style={styles.imgIndividual} source={staticImage} alt="" />
         <View>
           <Text>React Js</Text>
-          <Text>$</Text>
+          <Text>$3290</Text>
         </View>
       </View>
     </>
@@ -25,9 +25,9 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     width: '100%',
-    height: '50%',
+    height: '40%',
     alignItems: 'center',
-    marginTop: '10%',
+    marginTop: '5%',
   },
 });
 
