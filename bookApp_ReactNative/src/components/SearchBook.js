@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   Alert,
   Button,
@@ -13,11 +13,18 @@ import Card from '../components/Card';
 const staticImage = require('../images/bookTiles.png');
 
 const SearchBook = () => {
-  // const [text, onChangeText] = useState('');
   const [search, setSearch] = useState('');
 
-  const SearchBook = () => {
-    console.log('test');
+  const requestBook = (evt) => {
+    if (evt.key==='Enter') {
+      fetch(
+        'https://www.googleapis.com/books/v1/volumes?q=' +
+          search +
+          '&key=AIzaSyBoSq6oBNYCjDOi7se0T2lOIuXxLyr3Mrk',
+      )
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
+    }
   };
 
   return (
@@ -25,10 +32,11 @@ const SearchBook = () => {
       <View style={styles.searchStyle}>
         <TextInput
           placeholder="Enter your desired book"
+          keyboardType="text"
           style={styles.input}
-          onChangeText={e => setSearch(SearchBook)}
-          onKeyPress={searchBook}
+          onChangeText={e => setSearch(e.target.value)}
           value={search}
+          onKeyPress={requestBook}
         />
         <Button
           style={styles.btnSearch}
