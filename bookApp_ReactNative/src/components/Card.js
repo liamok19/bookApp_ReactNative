@@ -3,7 +3,8 @@ import {View, StyleSheet, Image, Text} from 'react-native';
 
 const staticImage = require('../images/bookTiles.png');
 
-const Card = () => {
+const Card = ({book}) => {
+  console.log(book);
   return (
     <>
       <View style={styles.card}>
